@@ -1,12 +1,12 @@
 ---
 layout:       post
-title:        "Java位运算技巧"
+title:        "Java8判空新写法"
 author:       "qinzheng"
 header-style: text
 catalog:      true
 tags:
     - Java
-    - 位运算
+    - Java8
 ---
 在文章的开头，先说下NPE问题，NPE问题就是，我们在开发中经常碰到的NullPointerException.假设我们有两个类，他们的UML类图如下图所示
 
@@ -258,7 +258,6 @@ Optional<User> user1 = Optional.ofNullable(user).filter(u -> u.getName().length(
 
 如上所示，如果user的name的长度是小于6的，则返回。如果是大于6的，则返回一个EMPTY对象。
 
-一个连载多年还在继续更新的免费教程：http://blog.didispace.com/spring-boot-learning-2x/
 
 ## **实战使用**
 
