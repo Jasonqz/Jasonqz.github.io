@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title: "React Hooks 是否可以改为用类似 Vue 3 Composition API 的方式实现？"
 subtitle: "Thinking in React vs. Thinking in Vue"
@@ -218,4 +218,4 @@ Seb 在 Hooks 发布后收到一些质疑的 brain dump[\[11\]](#ref_11) 里写�
 10.  通俗易懂的代数效应 [https://overreacted.io/zh-hans/algebraic-effects-for-the-rest-of-us/](https://overreacted.io/zh-hans/algebraic-effects-for-the-rest-of-us/)
 11.  Why React [https://gist.github.com/sebmarkbage/a5ef436427437a98408672108df01919](https://gist.github.com/sebmarkbage/a5ef436427437a98408672108df01919)
 12.  [https://swiftwithmajid.com/2019/06/12/understanding-property-wrappers-in-swiftui/](https://swiftwithmajid.com/2019/06/12/understanding-property-wrappers-in-swiftui/)
-13.  [https://developer.android.com/jetpack/compose/state#remember](https://developer.android.com/jetpack/compose/state#remember)
+13.  [https://developer.android.com/jetpack/compose/state#remember](https://developer.android.com/jetpack/compose/state#remember) -->

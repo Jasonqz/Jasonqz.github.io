@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title: "把「终端下的 Vim」作为 macOS Finder 的打开方式"
 subtitle: 'Open file with terminal Vim from the macOS Finder'
@@ -49,4 +49,4 @@ end run
 ### References
 
 - [Open file in iTerm vim for MacOS Sierra](https://gist.github.com/charlietran/43639b0f4e0a01c7c20df8f1929b76f2)
-- [Open file in Terminal Vim on OSX](https://bl.ocks.org/napcs/2d8376e941133ccfad63e33bf1b1b60c)
+- [Open file in Terminal Vim on OSX](https://bl.ocks.org/napcs/2d8376e941133ccfad63e33bf1b1b60c) -->
