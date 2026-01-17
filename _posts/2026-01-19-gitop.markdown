@@ -1,11 +1,11 @@
 ---
 layout:       post
-title:        "【技术小说连载】我在JVM公司的那些年（一）——奇怪的面试"
+title:        "最近从 0 学习Git，详细分类总结了这份 Git 命令宝典"
 author:       "qinzheng"
 header-style: text
 catalog:      true
 tags:
-    - JVM
+    - Git
 ---
 
 
