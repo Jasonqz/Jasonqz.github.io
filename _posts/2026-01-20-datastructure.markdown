@@ -5,7 +5,8 @@ author:       "qinzheng"
 header-style: text
 catalog:      true
 tags:
-    - Git
+    - 数据结构
+    - Java
 ---
 
 ### 什么是并查集

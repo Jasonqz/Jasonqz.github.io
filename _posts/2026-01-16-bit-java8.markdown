@@ -6,7 +6,6 @@ header-style: text
 catalog:      true
 tags:
     - Java
-    - Java8
 ---
 在文章的开头，先说下NPE问题，NPE问题就是，我们在开发中经常碰到的NullPointerException.假设我们有两个类，他们的UML类图如下图所示
 
