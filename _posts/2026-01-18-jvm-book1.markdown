@@ -6,6 +6,7 @@ header-style: text
 catalog:      true
 tags:
     - JVM
+    - 技术小说
 ---
 小说连载系列是我第一次尝试的新的技术讲解方式，希望通过小说的形式将技术细节讲解清楚。
 
