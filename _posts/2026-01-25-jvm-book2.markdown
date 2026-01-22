@@ -1,6 +1,6 @@
 ---
 layout:       post
-title:        "【技术小说连载】我在JVM公司的那些年（一）——奇怪的面试"
+title:        "【【技术小说连载】我在JVM公司的那些年（二）——残酷的制度"
 author:       "qinzheng"
 header-style: text
 catalog:      true

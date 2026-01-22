@@ -24,10 +24,10 @@ tags:
 例如，我定义了一个函数
 
 ```java
-1// 算 n 的阶乘(假设n不为0)
-2 int f(int n){
-3
-4 }
+// 算 n 的阶乘(假设n不为0)
+ int f(int n){
+ 
+ }
 ```
 
 这个函数的功能是算 n 的阶乘。好了，我们已经定义了一个函数，并且定义了它的功能是什么，接下来我们看第二要素。
@@ -39,12 +39,12 @@ tags:
 例如，上面那个例子，当 n = 1 时，那你应该能够直接知道 f(n) 是啥吧？此时，f(1) = 1。完善我们函数内部的代码，把第二要素加进代码里面，如下
 
 ```java
-1// 算 n 的阶乘(假设n不为0)
-2 int f(int n){
-3    if(n == 1){
-4        return 1;
-5    }
-6 }
+// 算 n 的阶乘(假设n不为0)
+ int f(int n){
+    if(n == 1){
+        return 1;
+    }
+ }
 ```
 
 有人可能会说，当 n = 2 时，那我们可以直接知道 f(n) 等于多少啊，那我可以把 n = 2 作为递归的结束条件吗？
@@ -52,23 +52,23 @@ tags:
 当然可以，只要你觉得参数是什么时，你能够直接知道函数的结果，那么你就可以把这个参数作为结束的条件，所以下面这段代码也是可以的。
 
 ```java
-1// 算 n 的阶乘(假设n>=2)
-2 int f(int n){
-3    if(n == 2){
-4        return 2;
-5    }
-6 }
+// 算 n 的阶乘(假设n>=2)
+ int f(int n){
+    if(n == 2){
+        return 2;
+    }
+ }
 ```
 
 注意我代码里面写的注释，假设 n >= 2，因为如果 n = 1时，会被漏掉，当 n <= 2时，f(n) = n，所以为了更加严谨，我们可以写成这样：
 
 ```java
-1// 算 n 的阶乘(假设n不为0)
-2 int f(int n){
-3    if(n <= 2){
-4        return n;
-5    }
-6 }
+// 算 n 的阶乘(假设n不为0)
+ int f(int n){
+    if(n <= 2){
+        return n;
+    }
+ }
 ```
 
 **第三要素：找出函数的等价关系式**
@@ -86,14 +86,14 @@ f(n) = n * f(n-1)。
 找出了这个等价，继续完善我们的代码，我们把这个等价式写进函数里。如下：
 
 ```java
-1// 算 n 的阶乘(假设n不为0)
-2 int f(int n){
-3    if(n <= 2){
-4        return n;
-5    }
-6    // 把 f(n) 的等价操作写进去
-7    return f(n-1) * n;
-8 }
+// 算 n 的阶乘(假设n不为0)
+ int f(int n){
+    if(n <= 2){
+        return n;
+    }
+    // 把 f(n) 的等价操作写进去
+    return f(n-1) * n;
+ }
 ```
 
 至此，递归三要素已经都写进代码里了，所以这个 f(n) 功能的内部代码我们已经写好了。
@@ -113,9 +113,9 @@ f(n) = n * f(n-1)。
 假设 f(n) 的功能是求第 n 项的值，代码如下：
 
 ```java
-1 int f(int n){
-2
-3 }
+ int f(int n){
+ 
+ }
 ```
 
 **2、找出递归结束的条件**
@@ -123,11 +123,11 @@ f(n) = n * f(n-1)。
 显然，当 n = 1 或者 n = 2 ,我们可以轻易着知道结果 f(1) = f(2) = 1。所以递归结束条件可以为  n <= 2。代码如下：
 
 ```java
-1 int f(int n){
-2    if(n <= 2){
-3        return 1;
-4    }
-5 }
+ int f(int n){
+    if(n <= 2){
+        return 1;
+    }
+ }
 ```
 
 **第三要素：找出函数的等价关系式**
@@ -137,14 +137,14 @@ f(n) = n * f(n-1)。
 所以最终代码如下：
 
 ```java
-1 int f(int n){
-2    // 1.先写递归结束条件
-3    if(n <= 2){
-4        return n;
-5    }
-6    // 2.接着写等价关系式
-7    return f(n-1) + f(n - 2);
-8 }
+ int f(int n){
+    // 1.先写递归结束条件
+    if(n <= 2){
+        return n;
+    }
+    // 2.接着写等价关系式
+    return f(n-1) + f(n - 2);
+ }
 ```
 
 搞定，是不是很简单？
@@ -160,9 +160,9 @@ f(n) = n * f(n-1)。
 假设 f(n) 的功能是求青蛙跳上一个n级的台阶总共有多少种跳法，代码如下：
 
 ```java
-1	int f(int n){
-2
-3	}
+	int f(int n){
+ 
+	}
 ```
 
 **2、找出递归结束的条件**
@@ -170,11 +170,11 @@ f(n) = n * f(n-1)。
 我说了，求递归结束的条件，你直接把 n 压缩到很小很小就行了，因为 n 越小，我们就越容易直观着算出 f(n) 的多少，所以当 n = 1时，你知道 f(1) 为多少吧？够直观吧？即 f(1) = 1。代码如下：
 
 ```java
-1 int f(int n){
-2    if(n == 1){
-3        return 1;
-4    }
-5 }
+ int f(int n){
+    if(n == 1){
+        return 1;
+    }
+ }
 ```
 
 **第三要素：找出函数的等价关系式**
@@ -188,12 +188,12 @@ f(n) = n * f(n-1)。
 所以，小青蛙的全部跳法就是这两种跳法之和了，即 f(n) = f(n-1) + f(n-2)。至此，等价关系式就求出来了。于是写出代码：
 
 ```java
-1 int f(int n){
-2    if(n == 1){
-3        return 1;
-4    }
-5    ruturn f(n-1) + f(n-2);
-6 }
+ int f(int n){
+    if(n == 1){
+        return 1;
+    }
+    ruturn f(n-1) + f(n-2);
+ }
 ```
 
 大家觉得上面的代码对不对？
@@ -203,13 +203,13 @@ f(n) = n * f(n-1)。
 这也是我要和你们说的，关于**递归结束条件是否够严谨问题**，有很多人在使用递归的时候，由于结束条件不够严谨，导致出现死循环。也就是说，当我们在第二步找出了一个递归结束条件的时候，可以把结束条件写进代码，然后进行第三步，但是**请注意**，当我们第三步找出等价函数之后，还得再返回去第二步，根据第三步函数的调用关系，会不会出现一些漏掉的结束条件。就像上面，f(n-2)这个函数的调用，有可能出现 f(0) 的情况，导致死循环，所以我们把它补上。代码如下：
 
 ```java
-1 int f(int n){
-2    //f(0) = 0,f(1) = 1，等价于 n<=2时，f(n) = n。
-3    if(n <= 2){
-4        return n;
-5    }
-6    ruturn f(n-1) + f(n-2);
-7 }
+ int f(int n){
+    //f(0) = 0,f(1) = 1，等价于 n<=2时，f(n) = n。
+    if(n <= 2){
+        return n;
+    }
+    ruturn f(n-1) + f(n-2);
+ }
 ```
 
 有人可能会说，我不知道我的结束条件有没有漏掉怎么办？别怕，多练几道就知道怎么办了。
@@ -225,10 +225,10 @@ f(n) = n * f(n-1)。
 链表的节点定义如下：
 
 ```java
-1 class Node{
-2    int date;
-3    Node next;
-4 }
+ class Node{
+    int date;
+    Node next;
+ }
 ```
 
 虽然是 Java语言，但就算你没学过 Java，我觉得也是影响不大，能看懂。
@@ -240,9 +240,9 @@ f(n) = n * f(n-1)。
 假设函数 reverseList(head) 的功能是反转但链表，其中 head 表示链表的头节点。代码如下：
 
 ```java
-1 Node reverseList(Node head){
-2
-3 }
+ Node reverseList(Node head){
+ 
+ }
 ```
 
 **2. 寻找结束条件**
@@ -250,11 +250,11 @@ f(n) = n * f(n-1)。
 当链表只有一个节点，或者如果是空表的话，你应该知道结果吧？直接啥也不用干，直接把 head 返回呗。代码如下：
 
 ```java
-1 Node reverseList(Node head){
-2    if(head == null || head.next == null){
-3        return head;
-4    }
-5 }
+ Node reverseList(Node head){
+    if(head == null || head.next == null){
+        return head;
+    }
+ }
 ```
 
 **3. 寻找等价关系**
@@ -266,13 +266,13 @@ f(n) = n * f(n-1)。
 我们就缩小范围，先对 2->3->4递归下试试，即代码如下
 
 ```java
-1 Node reverseList(Node head){
-2    if(head == null || head.next == null){
-3        return head;
-4    }
-5    // 我们先把递归的结果保存起来，先不返回，因为我们还不清楚这样递归是对还是错。，
-6    Node newList = reverseList(head.next);
-7 }
+Node reverseList(Node head){
+    if(head == null || head.next == null){
+        return head;
+    }
+    // 我们先把递归的结果保存起来，先不返回，因为我们还不清楚这样递归是对还是错。，
+    Node newList = reverseList(head.next);
+}
 ```
 
 我们在第一步的时候，就已经定义了 reverseLis t函数的功能可以把一个单链表反转，所以，我们对 2->3->4反转之后的结果应该是这样：
@@ -290,24 +290,24 @@ f(n) = n * f(n-1)。
 也就是说，reverseList(head) 等价于 ** reverseList(head.next)** + **改变一下1，2两个节点的指向**。好了，等价关系找出来了，代码如下(有详细的解释)：
 
 ```java
- 1//用递归的方法反转链表
- 2 public static Node reverseList2(Node head){
- 3    // 1.递归结束条件
- 4    if (head == null || head.next == null) {
- 5             return head;
- 6    }
- 7    // 递归反转 子链表
- 8    Node newList = reverseList2(head.next);
- 9    // 改变 1，2节点的指向。
-10    // 通过 head.next获取节点2
-11    Node t1  = head.next;
-12    // 让 2 的 next 指向 2
-13    t1.next = head;
-14    // 1 的 next 指向 null.
-15    head.next = null;
-16    // 把调整之后的链表返回。
-17    return newList;
-18 }
+//用递归的方法反转链表
+ public static Node reverseList2(Node head){
+    // 1.递归结束条件
+    if (head == null || head.next == null) {
+             return head;
+    }
+    // 递归反转 子链表
+    Node newList = reverseList2(head.next);
+    // 改变 1，2节点的指向。
+    // 通过 head.next获取节点2
+    Node t1  = head.next;
+    // 让 2 的 next 指向 2
+    t1.next = head;
+    // 1 的 next 指向 null.
+    head.next = null;
+    // 把调整之后的链表返回。
+    return newList;
+ }
 ```
 
 这道题的第三步看的很懵？正常，因为你做的太少了，可能没有想到还可以这样，多练几道就可以了。但是，我希望通过这三道题，给了你以后用递归做题时的一些思路，你以后做题可以按照我这个模式去想。通过一篇文章是不可能掌握递归的，还得多练，我相信，只要你认真看我的这篇文章，多看几次，一定能找到一些思路！！
@@ -337,21 +337,21 @@ f(n) = n * f(n-1)。
 当我们要判断的时候，如果 arr[n] = -1，则证明 f(n) 没有计算过，否则， f(n) 就已经计算过了，且 f(n) = arr[n]。直接把值取出来就行了。代码如下：
 
 ```java
- 1 // 我们实现假定 arr 数组已经初始化好的了。
- 2 int f(int n){
- 3    if(n <= 1){
- 4        return n;
- 5    }
- 6    //先判断有没计算过
- 7    if(arr[n] != -1){
- 8        //计算过，直接返回
- 9        return arr[n];
-10    }else{
-11        // 没有计算过，递归计算,并且把结果保存到 arr数组里
-12        arr[n] = f(n-1) + f(n-1);
-13        reutrn arr[n];
-14    }
-15 }
+// 我们实现假定 arr 数组已经初始化好的了。
+int f(int n){
+    if(n <= 1){
+        return n;
+    }
+    //先判断有没计算过
+    if(arr[n] != -1){
+        //计算过，直接返回
+        return arr[n];
+    }else{
+        // 没有计算过，递归计算,并且把结果保存到 arr数组里
+        arr[n] = f(n-1) + f(n-1);
+        reutrn arr[n];
+    }
+}
 ```
 
 也就是说，使用递归的时候，必要
@@ -372,20 +372,20 @@ f(2) = 2;
 那么我们就可以推出 f(3) = f(2) + f(1) = 3。从而可以推出f(4),f(5)等直到f(n)。因此，我们可以考虑使用自底向上的方法来取代递归，代码如下：
 
 ```java
- 1   public int f(int n) {
- 2       if(n <= 2)
- 3           return n;
- 4       int f1 = 1;
- 5       int f2 = 2;
- 6       int sum = 0;
- 7
- 8       for (int i = 3; i <= n; i++) {
- 9           sum = f1 + f2;
-10           f1 = f2;
-11           f2 = sum;
-12       }
-13       return sum;
-14   }
+ public int f(int n) {
+    if(n <= 2)
+        return n;
+    int f1 = 1;
+    int f2 = 2;
+    int sum = 0;
+
+    for (int i = 3; i <= n; i++) {
+        sum = f1 + f2;
+        f1 = f2;
+        f2 = sum;
+    }
+    return sum;
+}
 ```
 
 这种方法，其实也被称之为**递推**。
